@@ -1,0 +1,25 @@
+$main_width: 1366px;
+$main_font: 'Open Sans';
+$header_font: 'Source Sans Pro';
+$logo: 'BigJohn';
+$active_hover_color: #19bd9a;
+$main_first_color: #19bd9a;
+$main_text_color: #ffffff;
+$simple_white: #ffffff;
+$headers_color: #333b46;
+$simple_text_color: #81868e;
+$button_back_color: #81868e;
+$font_awesome: 'Font Awesome 5 Free';
+$facebook: #3b5998;
+$twitter: #26a6d1;
+$linkedin: #0e76a8;
+$instagram: #3f729b;
+$vimeo: #86c9ef;
+@mixin padding__LR($left,$right){
+  padding-left: $left;
+  padding-right: $right;
+}
+@mixin padding__TB($top,$bottom){
+  padding-top: $top;
+  padding-bottom: $bottom;
+}

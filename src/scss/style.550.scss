@@ -1,0 +1,218 @@
+.header{
+  @include padding__TB(0px,0px);
+  @include padding__LR(0px,0px);
+}
+.fixed__menu{
+  @include padding__TB(0px,0px);
+  @include padding__LR(0px,0px);
+}
+.main_central{
+  @include padding__LR(20px,20px);
+}
+.burger_logo{
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  .logo{
+    margin-top: 5px;
+  }
+}
+.burger_menu{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin-left: 10px;
+  span, :after, :before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    margin: 0 auto;
+    background: $simple_white;
+  }
+  span{
+    top: 50%;
+  }
+  :after,:before{
+    content: '';
+  }
+  :after{
+    width: 40px;
+    bottom: 8px;
+  }
+  :before{
+    top: 8px;
+    width: 40px;
+  }
+}
+.open-menu{
+  span{
+    width: 0;
+    transition: 0.4s;
+  }
+  :before{
+    transform: rotate(38deg);
+    top: 0;
+    transition: 0.4s;
+  }
+  :after{
+    transform: rotate(-38deg);
+    bottom: 0;
+    transition: 0.4s;
+  }
+}
+.close-menu{
+  span{
+    width: 100%;
+    transition: 0.4s;
+  }
+  :before{
+    top: 8px;
+    transition: 0.4s;
+  }
+  :after{
+    bottom: 8px;
+    transition: 0.4s;
+  }
+}
+.close-nav{
+  position: absolute;
+  top: 40px;
+  left: -100%;
+  opacity: 0.1;
+  transition: 0.3s;
+}
+.open-nav{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  opacity: 1;
+  transition: 0.3s;
+}
+.nav{
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+  width: 100%;
+  background-color: #76664d;
+  ul{
+    flex-direction: column;
+    li{
+      width: 100%;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      box-sizing: border-box;
+      a{
+        width: 100%;
+        padding-left: 15px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.this_is_bouncy img{
+  margin-top: 30px;
+  width: 115px;
+  height: 150px;
+}
+.featured_projects_gallery{
+  display: none;
+}
+.this_is_bouncy{
+  flex-direction: column;
+  align-items: center;
+  @include padding__LR(30px,30px);
+  .this_is_bouncy_review{
+    text-align: center;
+    margin:0;
+    h2{
+      text-align: center;
+    }
+    p{
+      text-align: justify;
+    }
+  }
+}
+.impressed_block_img{
+  min-width: 300px;
+  .impressed_block_display{
+    width: 300px;
+  }
+}
+
+.about_bouncy{
+  @include padding__LR(30px,30px);
+}
+.our_services{
+  @include padding__TB(30px,30px);
+  @include padding__LR(30px,30px);
+  .our_services_graphic_block{
+    flex-direction: column;
+    align-items: center;
+  }
+  .our_services_graphic_block_links{
+    margin: 0;
+    flex-direction: row;
+    width: 100%;
+  }
+  .our_services_graphic_block_description{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    p{
+      text-align: justify;
+    }
+  }
+  .our_services_graphic_item{
+    width: 110%;
+    flex-wrap: nowrap;
+  }
+}
+.portfolio_seq{
+  @include padding__TB(30px,30px);
+  @include padding__LR(30px,30px);
+  .portfolio_seq_gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.team__seq{
+  @include padding__LR(30px,30px);
+  @include padding__TB(30px,30px);
+  .skills__graphics__item{
+      width: 300px;
+  }
+  p{
+    font-size: 14px;
+  }
+  .team__name__regals::after{
+    display: none;
+  }
+}
+.about_bouncy_creative_text{
+   flex-direction: column;
+  p{
+    text-align: justify;
+    margin: 0;
+    font-size: 14px;
+    hyphens: auto;
+  }
+ }
+.personal__team__card{
+ .personal__team__card_avatar{
+    width: 80%;
+    height: 80%;
+  }
+}
+.testimonials_block{
+  @include padding__LR(20px,20px);
+  @include padding__TB(30px,30px);
+}
