@@ -610,7 +610,6 @@ body{
   flex-wrap: wrap;
   width: 575px;
   justify-content: space-between;
-
   a {
     text-decoration: none;
     font-family: $main_font;
@@ -1338,7 +1337,10 @@ body{
   .contact_methods{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    .method{
+      margin-bottom: 15px;
+    }
   }
 }
 .method{
@@ -1591,11 +1593,64 @@ position: relative;
   }
 }
 @media (max-width: 1330px){
+  .portfolio_seq{
+    @include padding__LR(35px,35px);
+  }
   .portfolio_seq_gallery{
     column-count: 3;
+    text-align: center;
   }
   .impressed_block_description{
     width: 400px;
+  }
+  .contact_us_method{
+    @include padding__LR(50px, 50px)
+  }
+  .featured_projects_gallery{
+    position: relative;
+    cursor: pointer;
+    a{
+      display: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../img/Layer 83.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 2;
+      transition: 0.1s;
+    }
+    &:hover:before{
+      filter: brightness(50%);
+      transition: 0.1s;
+    }
+    &:after{
+      display: flex;
+      content: "VINTAGE";
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      color: transparent;
+      font-family: $header_font;
+      font-size: 20px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.6;
+      letter-spacing: 4px;
+      text-align: center;
+      z-index: 3;
+      transition: 0.1s;
+    }
+    &:hover:after{
+      color: $simple_white;
+      transition: 0.1s;
+    }
   }
 }
 @media (max-width: 1024px){
@@ -1608,17 +1663,47 @@ position: relative;
   .about_bouncy{
     @include padding__LR(50px,50px);
   }
-  .portfolio_seq_gallery{
-    column-count: unset;
-    .portfolio_seq_item{
-      margin-top: 0;
-      -webkit-box-shadow: 0px 0px 6px 0px rgba(34, 60, 80, 0.2);
-      -moz-box-shadow: 0px 0px 6px 0px rgba(34, 60, 80, 0.2);
-      box-shadow: 0px 0px 6px 0px rgba(34, 60, 80, 0.2);
+  .contact_methods{
+    flex-wrap: wrap;
+  }
+  .contact_form {
+      @include padding__LR(30px,30px);
+    .init_form .main_elems{
+      width: 250px;
     }
   }
+  .our_price{
+    @include padding__LR(30px,30px);
+  }
+  .portfolio_seq_gallery{
+    column-count: 2;
+    text-align: center;
+  }
 }
+
 @media (max-width: 835px){
+  .contact_form{
+    .init_form .main_elems{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  .our_rice_deals {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .deal{
+      height: 250px;
+      margin-left: unset;
+      margin-bottom: 15px;
+      .deal_hidden_block{
+        height: 250px;
+        padding-top: 23px;
+      }
+      .deal_header{
+        margin-bottom: 47px;
+      }
+    }
+  }
   .this_is_bouncy_review{
     margin-right: 50px;
   }

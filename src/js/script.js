@@ -52,8 +52,8 @@ var eventOnElement =(element, eventFunc)=>{
         key.addEventListener('click',eventFunc );
     }
 }
-let selectorColor = 'card_selector_color';
 var slidersButtonsColor = (event)=>{
+    let selectorColor = 'card_selector_color';
     var selector = event.target;
     var childList = selector.parentElement.querySelectorAll('*');
     for (let key of childList){
